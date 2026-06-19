@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T-Bridge Finance LLC — Protect Your Future. Preserve Your Wealth.</title>
+<meta name="description" content="T-Bridge Finance LLC helps families protect income, build long-term financial security, and preserve generational wealth through insurance, retirement, estate, trust, and legacy planning strategies. Serving Maryland and families across the United States.">
+<meta name="keywords" content="financial planning, life insurance, estate planning, trust planning, retirement planning, college funding, mortgage protection, Maryland financial advisor, wealth preservation">
+<meta property="og:title" content="T-Bridge Finance LLC — Protect Your Future. Preserve Your Wealth.">
+<meta property="og:description" content="Insurance, retirement, estate, trust, and legacy planning for families who want protection today and security tomorrow.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta name="theme-color" content="#14524C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ===== T-BRIDGE FINANCE — DESIGN TOKENS ===== */
+:root {
+  --tb-harbor-teal:   #14524C;
+  --tb-evergreen:     #0E3A37;
+  --tb-brass:         #AD7F46;
+  --tb-ivory:         #FAF7F1;
+  --tb-sage:          #EAF0EC;
+  --tb-ink:           #1F2A2A;
+  --tb-stone:         #D9D5CC;
+  --tb-muted-text:    #5A6663;
+  --tb-brass-soft:    #F3EBDD;
+  --tb-teal-tint:     #DCE8E4;
+  --tb-white:         #FFFFFF;
+
+  --tb-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --tb-sans:  "Source Sans 3", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  --tb-h1: clamp(2.6rem, 5.2vw, 4rem);
+  --tb-h2: clamp(2rem, 4vw, 2.85rem);
+  --tb-h3: clamp(1.45rem, 2.6vw, 1.9rem);
+  --tb-lead: clamp(1.2rem, 2.1vw, 1.45rem);
+  --tb-body: clamp(1.0625rem, 1.2vw, 1.125rem);
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--tb-ivory);
+  color: var(--tb-ink);
+  font-family: var(--tb-sans);
+  font-size: var(--tb-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--tb-harbor-teal); text-decoration: none; }
+a:hover { color: var(--tb-evergreen); }
+p { margin: 0 0 1.1em; max-width: 68ch; }
+h1,h2,h3,h4,h5 {
+  font-family: var(--tb-serif);
+  color: var(--tb-harbor-teal);
+  margin: 0 0 .5em;
+  font-weight: 600;
+}
+h1 { font-size: var(--tb-h1); line-height: 1.06; letter-spacing: -0.015em; }
+h2 { font-size: var(--tb-h2); line-height: 1.14; letter-spacing: -0.01em; }
+h3 { font-size: var(--tb-h3); line-height: 1.24; }
+h4 { font-size: 1.3rem; line-height: 1.3; color: var(--tb-ink); }
+h5 { font-size: 1.1rem; line-height: 1.35; color: var(--tb-ink); }
+ul, ol { padding-left: 1.2em; }
+
+/* ===== LAYOUT ===== */
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+.section { padding: 90px 0; }
+.section--sage { background: var(--tb-sage); }
+.section--ivory { background: var(--tb-ivory); }
+.section--deep {
+  background: linear-gradient(160deg, var(--tb-evergreen) 0%, var(--tb-harbor-teal) 70%);
+  color: var(--tb-ivory);
+}
+.section--deep h2, .section--deep h3, .section--deep h4 { color: var(--tb-ivory); }
+.section--deep p { color: rgba(250,247,241,.82); }
+
+/* ===== UTILITY ===== */
+.eyebrow {
+  font-family: var(--tb-sans); font-weight: 600; font-size: .8125rem;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--tb-brass);
+  margin: 0 0 1rem; display: block;
+}
+.lead {
+  font-size: var(--tb-lead); line-height: 1.55;
+  color: var(--tb-muted-text); max-width: 60ch; font-weight: 400;
+}
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block; font-family: var(--tb-sans); font-weight: 600;
+  font-size: 1rem; letter-spacing: .01em; padding: 15px 32px;
+  border-radius: 8px; text-decoration: none; cursor: pointer;
+  border: 2px solid transparent; transition: .18s ease; text-align: center;
+}
+.btn-primary { background: var(--tb-harbor-teal); color: var(--tb-white); }
+.btn-primary:hover { background: var(--tb-evergreen); color: var(--tb-white); }
+.btn-secondary { background: transparent; color: var(--tb-harbor-teal); border-color: var(--tb-harbor-teal); }
+.btn-secondary:hover { background: var(--tb-harbor-teal); color: var(--tb-white); }
+.btn-accent { background: transparent; color: var(--tb-evergreen); border-color: var(--tb-brass); box-shadow: inset 0 -2px 0 var(--tb-brass); }
+.btn-accent:hover { background: var(--tb-brass); color: var(--tb-evergreen); box-shadow: none; }
+.btn-white { background: var(--tb-white); color: var(--tb-harbor-teal); }
+.btn-white:hover { background: var(--tb-ivory); color: var(--tb-evergreen); }
+.btn-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+
+/* ===== CARDS ===== */
+.card {
+  background: var(--tb-white); border: 1px solid var(--tb-stone);
+  border-radius: 14px; padding: 30px 28px; transition: .18s ease;
+}
+.card:hover { box-shadow: 0 8px 30px rgba(20,82,76,.08); transform: translateY(-2px); }
+.card h4 { margin-top: 0; color: var(--tb-harbor-teal); }
+.card p:last-child { margin-bottom: 0; }
+
+/* ===== HEADER ===== */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(250,247,241,.96); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--tb-stone);
+  transition: box-shadow .2s ease;
+}
+.site-header.scrolled { box-shadow: 0 2px 20px rgba(20,42,42,.08); }
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 28px; max-width: 1180px; margin: 0 auto; height: 74px;
+}
+.header-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.header-logo .logo-glyph {
+  width: 42px; height: 42px; border-radius: 10px; flex: none;
+  background: var(--tb-brass); display: grid; place-items: center;
+  font-family: var(--tb-serif); font-weight: 700; color: var(--tb-evergreen); font-size: 1.4rem;
+}
+.header-logo .logo-text {
+  font-family: var(--tb-serif); font-weight: 600; font-size: 1.15rem;
+  color: var(--tb-harbor-teal); letter-spacing: .01em; line-height: 1.2;
+}
+.header-logo .logo-tag {
+  font-family: var(--tb-sans); font-size: .65rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--tb-muted-text); font-weight: 600; display: block;
+}
+
+/* Desktop Navigation */
+.nav-desktop { display: flex; align-items: center; gap: 6px; }
+.nav-desktop a, .nav-dropdown-trigger {
+  font-family: var(--tb-sans); font-weight: 600; font-size: .9375rem;
+  color: var(--tb-ink); text-decoration: none; padding: 8px 14px;
+  border-radius: 6px; transition: .15s ease; cursor: pointer;
+  background: none; border: none; display: flex; align-items: center; gap: 4px;
+}
+.nav-desktop a:hover, .nav-dropdown-trigger:hover { color: var(--tb-harbor-teal); background: var(--tb-sage); }
+
+/* Services dropdown */
+.nav-dropdown { position: relative; }
+.nav-dropdown-trigger svg { width: 12px; height: 12px; transition: transform .2s ease; }
+.nav-dropdown.open .nav-dropdown-trigger svg { transform: rotate(180deg); }
+.nav-dropdown-menu {
+  position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+  background: var(--tb-white); border: 1px solid var(--tb-stone);
+  border-radius: 14px; padding: 20px; min-width: 600px;
+  box-shadow: 0 16px 48px rgba(20,42,42,.12);
+  opacity: 0; visibility: hidden; transition: opacity .2s ease, visibility .2s ease;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
+}
+.nav-dropdown.open .nav-dropdown-menu { opacity: 1; visibility: visible; }
+.dropdown-item {
+  display: block; padding: 12px 16px; border-radius: 8px;
+  text-decoration: none; color: var(--tb-ink); transition: .15s ease;
+}
+.dropdown-item:hover { background: var(--tb-sage); color: var(--tb-harbor-teal); }
+.dropdown-item .di-label { font-weight: 600; font-size: .9rem; display: block; }
+.dropdown-item .di-desc { font-size: .78rem; color: var(--tb-muted-text); display: block; margin-top: 2px; }
+.dropdown-section-label {
+  font-size: .7rem; text-transform: uppercase; letter-spacing: .14em;
+  color: var(--tb-brass); font-weight: 600; padding: 8px 16px 4px; grid-column: 1 / -1;
+}
+
+.header-cta { display: flex; align-items: center; gap: 14px; }
+.header-phone {
+  font-family: var(--tb-sans); font-weight: 600; font-size: .875rem;
+  color: var(--tb-harbor-teal); text-decoration: none; display: flex; align-items: center; gap: 6px;
+}
+.header-phone svg { width: 16px; height: 16px; }
+.header-btn {
+  font-family: var(--tb-sans); font-weight: 600; font-size: .875rem;
+  padding: 10px 22px; border-radius: 8px; text-decoration: none;
+  background: var(--tb-harbor-teal); color: var(--tb-white); transition: .18s ease;
+}
+.header-btn:hover { background: var(--tb-evergreen); color: var(--tb-white); }
+
+/* Mobile menu toggle */
+.mobile-toggle {
+  display: none; background: none; border: none; cursor: pointer; padding: 8px;
+  color: var(--tb-ink);
+}
+.mobile-toggle svg { width: 26px; height: 26px; }
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none; position: fixed; top: 74px; left: 0; right: 0; bottom: 0;
+  background: var(--tb-white); z-index: 999; overflow-y: auto;
+  padding: 20px 28px 40px; flex-direction: column;
+}
+.nav-mobile.open { display: flex; }
+.nav-mobile a {
+  font-family: var(--tb-sans); font-weight: 600; font-size: 1.05rem;
+  color: var(--tb-ink); text-decoration: none; padding: 14px 0;
+  border-bottom: 1px solid var(--tb-stone); display: block;
+}
+.nav-mobile a:hover { color: var(--tb-harbor-teal); }
+.mobile-services-toggle {
+  font-family: var(--tb-sans); font-weight: 600; font-size: 1.05rem;
+  color: var(--tb-ink); background: none; border: none; cursor: pointer;
+  padding: 14px 0; border-bottom: 1px solid var(--tb-stone);
+  display: flex; justify-content: space-between; align-items: center; width: 100%;
+  text-align: left;
+}
+.mobile-services-toggle svg { width: 16px; height: 16px; transition: transform .2s ease; }
+.mobile-services-toggle.open svg { transform: rotate(180deg); }
+.mobile-services-list {
+  display: none; padding: 0 0 8px 16px;
+}
+.mobile-services-list.open { display: block; }
+.mobile-services-list a { font-size: .95rem; font-weight: 500; padding: 10px 0; border-bottom: 1px solid var(--tb-teal-tint); }
+.nav-mobile .mobile-cta-group {
+  margin-top: 24px; display: flex; flex-direction: column; gap: 12px;
+}
+.nav-mobile .mobile-cta-group a { border-bottom: none; text-align: center; }
+
+/* ===== HERO ===== */
+.hero {
+  padding-top: 74px;
+  background:
+    radial-gradient(120% 90% at 85% -10%, rgba(173,127,70,.16), transparent 55%),
+    linear-gradient(160deg, var(--tb-evergreen) 0%, var(--tb-harbor-teal) 70%);
+  color: var(--tb-ivory);
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ""; position: absolute; left: -5%; right: -5%; bottom: 60px; height: 240px;
+  border-bottom: 2px solid rgba(250,247,241,.15);
+  border-radius: 0 0 50% 50%/0 0 100% 100%;
+  pointer-events: none;
+}
+.hero::before {
+  content: ""; position: absolute; right: -10%; top: 20%; width: 500px; height: 500px;
+  border-radius: 50%; border: 1px solid rgba(250,247,241,.06);
+  pointer-events: none;
+}
+.hero-inner {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr .85fr; gap: 60px; align-items: center;
+  padding: 100px 0 110px;
+}
+.hero-content .eyebrow { color: var(--tb-brass); }
+.hero h1 { color: var(--tb-ivory); max-width: 16ch; margin-bottom: .35em; }
+.hero .lead { color: rgba(250,247,241,.8); max-width: 50ch; margin-bottom: 2em; }
+.hero .btn-row { margin-bottom: 2em; }
+.hero-trust {
+  display: flex; gap: 24px; flex-wrap: wrap;
+  font-size: .85rem; color: rgba(250,247,241,.6);
+}
+.hero-trust span { display: flex; align-items: center; gap: 6px; }
+.hero-trust svg { width: 16px; height: 16px; color: var(--tb-brass); }
+
+/* ===== IMAGE / MEDIA TREATMENT ===== */
+/* Reusable rounded image frame with optional brand-tone overlay for premium cohesion */
+.media-frame {
+  position: relative; border-radius: 20px; overflow: hidden;
+  border: 1px solid var(--tb-stone);
+}
+.media-frame img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+/* Subtle teal grade so any photo reads on-brand, warm, and premium (not cold stock) */
+.media-frame--grade::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(165deg, rgba(14,58,55,.35) 0%, rgba(20,82,76,.10) 45%, rgba(173,127,70,.12) 100%);
+}
+.media-frame--brass { border: none; box-shadow: 0 0 0 1px var(--tb-stone), 14px 14px 0 0 var(--tb-brass-soft); }
+
+/* Hero visual: framed family/advisory photo with overlapping caption card */
+.hero-visual { position: relative; display: flex; align-items: center; justify-content: center; }
+.hero-visual .media-frame {
+  width: 100%; aspect-ratio: 4 / 5; border: 1px solid rgba(250,247,241,.18);
+  box-shadow: 0 24px 60px rgba(14,58,55,.45);
+}
+.hero-visual .media-frame::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(14,58,55,.12) 0%, rgba(14,58,55,.55) 100%);
+}
+.hero-caption-card {
+  position: absolute; left: -24px; bottom: -28px; z-index: 3;
+  background: rgba(250,247,241,.96); backdrop-filter: blur(6px);
+  border-radius: 16px; padding: 22px 24px; max-width: 290px;
+  box-shadow: 0 16px 40px rgba(14,58,55,.28);
+}
+.hero-caption-card .pillars { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.hero-caption-card .pillars span {
+  font-family: var(--tb-serif); font-style: italic; font-size: .9rem;
+  color: var(--tb-harbor-teal); border: 1px solid var(--tb-stone);
+  padding: 4px 14px; border-radius: 40px;
+}
+.hero-caption-card p {
+  font-family: var(--tb-serif); font-size: 1.05rem; color: var(--tb-evergreen);
+  font-weight: 500; margin: 0; line-height: 1.35;
+}
+.hero-caption-icon {
+  width: 38px; height: 38px; border-radius: 10px; margin-bottom: 12px;
+  background: var(--tb-teal-tint); display: grid; place-items: center;
+}
+.hero-caption-icon svg { width: 20px; height: 20px; color: var(--tb-harbor-teal); }
+
+/* ===== TRUST BAR ===== */
+.trust-bar {
+  background: var(--tb-white); border-bottom: 1px solid var(--tb-stone); padding: 28px 0;
+}
+.trust-bar-inner {
+  display: flex; justify-content: center; align-items: center;
+  gap: 40px; flex-wrap: wrap; text-align: center;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 10px; font-size: .9rem;
+  color: var(--tb-muted-text); font-weight: 500;
+}
+.trust-item svg { width: 20px; height: 20px; color: var(--tb-harbor-teal); flex: none; }
+
+/* ===== INTRO / ABOUT ===== */
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.intro-visual { position: relative; }
+.intro-visual .media-frame { aspect-ratio: 5 / 4; }
+.intro-visual-card {
+  background: var(--tb-sage); border-radius: 20px; padding: 32px 30px; position: relative;
+  border: 1px solid var(--tb-stone); margin: -56px 24px 0; z-index: 2;
+}
+.intro-visual-quote {
+  font-family: var(--tb-serif); font-style: italic; font-weight: 400;
+  font-size: clamp(1.2rem, 2vw, 1.6rem); line-height: 1.4;
+  color: var(--tb-evergreen); border-left: 3px solid var(--tb-brass);
+  padding-left: 24px;
+}
+.intro-visual-attr {
+  margin-top: 16px; font-size: .85rem; color: var(--tb-muted-text);
+  padding-left: 27px;
+}
+.intro-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;
+}
+.intro-stat {
+  background: var(--tb-white); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--tb-stone); text-align: center;
+}
+.intro-stat .stat-icon { color: var(--tb-brass); margin-bottom: 6px; }
+.intro-stat .stat-icon svg { width: 24px; height: 24px; margin: 0 auto; }
+.intro-stat .stat-label {
+  font-size: .8rem; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--tb-muted-text); font-weight: 600;
+}
+
+/* ===== PILLARS ===== */
+.pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
+.pillar-card {
+  background: var(--tb-white); border: 1px solid var(--tb-stone);
+  border-radius: 16px; padding: 36px 30px; text-align: center; transition: .18s ease;
+  position: relative; overflow: hidden;
+}
+.pillar-card::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--tb-brass); opacity: 0; transition: opacity .2s ease;
+}
+.pillar-card:hover::before { opacity: 1; }
+.pillar-card:hover { box-shadow: 0 8px 30px rgba(20,82,76,.08); transform: translateY(-2px); }
+.pillar-icon {
+  width: 56px; height: 56px; border-radius: 14px; margin: 0 auto 18px;
+  background: var(--tb-teal-tint); display: grid; place-items: center;
+}
+.pillar-icon svg { width: 28px; height: 28px; color: var(--tb-harbor-teal); }
+.pillar-card h3 { font-size: 1.5rem; margin-bottom: .3em; }
+.pillar-card p { color: var(--tb-muted-text); max-width: 36ch; margin: 0 auto; font-size: .95rem; }
+
+/* ===== SERVICES ===== */
+.services-tabs {
+  display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;
+}
+.services-tab {
+  font-family: var(--tb-sans); font-weight: 600; font-size: .9rem;
+  padding: 10px 24px; border-radius: 40px; border: 1px solid var(--tb-stone);
+  background: var(--tb-white); color: var(--tb-muted-text); cursor: pointer;
+  transition: .18s ease;
+}
+.services-tab:hover { border-color: var(--tb-harbor-teal); color: var(--tb-harbor-teal); }
+.services-tab.active {
+  background: var(--tb-harbor-teal); color: var(--tb-white); border-color: var(--tb-harbor-teal);
+}
+.services-panel { display: none; }
+.services-panel.active { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.service-card { padding: 28px 26px; }
+.service-card .service-icon {
+  width: 44px; height: 44px; border-radius: 11px;
+  background: var(--tb-teal-tint); display: grid; place-items: center; margin-bottom: 16px;
+}
+.service-card .service-icon svg { width: 22px; height: 22px; color: var(--tb-harbor-teal); }
+.service-card h4 { color: var(--tb-harbor-teal); font-size: 1.15rem; margin-bottom: .4em; }
+.service-card p { font-size: .92rem; color: var(--tb-muted-text); margin-bottom: 0; }
+
+/* ===== AUDIENCE ===== */
+.audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px; }
+.audience-card {
+  background: var(--tb-white); border: 1px solid var(--tb-stone);
+  border-radius: 14px; padding: 28px 24px; transition: .18s ease;
+}
+.audience-card:hover { box-shadow: 0 6px 24px rgba(20,82,76,.07); transform: translateY(-2px); }
+.audience-icon {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--tb-brass-soft); display: grid; place-items: center; margin-bottom: 14px;
+}
+.audience-icon svg { width: 22px; height: 22px; color: var(--tb-brass); }
+.audience-card h4 { font-size: 1.05rem; color: var(--tb-harbor-teal); margin-bottom: .3em; }
+.audience-card p { font-size: .88rem; color: var(--tb-muted-text); margin-bottom: 0; }
+
+/* ===== WHY CHOOSE ===== */
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; }
+.why-item {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: rgba(250,247,241,.08); border: 1px solid rgba(250,247,241,.12);
+  border-radius: 14px; padding: 24px;
+}
+.why-icon {
+  width: 40px; height: 40px; border-radius: 10px; flex: none;
+  background: rgba(173,127,70,.2); display: grid; place-items: center;
+}
+.why-icon svg { width: 20px; height: 20px; color: var(--tb-brass); }
+.why-item h4 { color: var(--tb-ivory); font-size: 1.05rem; margin-bottom: .25em; }
+.why-item p { font-size: .9rem; margin-bottom: 0; }
+
+/* ===== PROCESS ===== */
+.process-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
+.process-step { text-align: center; position: relative; }
+.process-num {
+  font-family: var(--tb-serif); font-style: italic; font-weight: 400;
+  color: var(--tb-brass); font-size: 2.2rem; margin-bottom: 8px;
+}
+.process-step h4 { color: var(--tb-harbor-teal); margin-bottom: .3em; }
+.process-step p { font-size: .92rem; color: var(--tb-muted-text); max-width: 30ch; margin: 0 auto; }
+.process-connector {
+  position: absolute; top: 30px; right: -20px; width: 40px;
+  border-top: 2px dashed var(--tb-stone);
+}
+
+/* ===== MISSION ===== */
+.mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 36px; }
+.mission-quote {
+  font-family: var(--tb-serif); font-style: italic; font-weight: 400;
+  font-size: clamp(1.3rem, 2.4vw, 1.75rem); line-height: 1.4;
+  color: var(--tb-evergreen); border-left: 3px solid var(--tb-brass);
+  padding: 6px 0 6px 26px; margin: 0 0 36px;
+}
+.values-list { list-style: none; padding: 0; margin: 0; }
+.values-list li {
+  padding: 16px 0; border-bottom: 1px solid var(--tb-stone);
+  display: flex; gap: 14px; align-items: flex-start;
+}
+.values-list li:last-child { border-bottom: none; }
+.value-dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--tb-brass);
+  flex: none; margin-top: 8px;
+}
+.value-name { font-weight: 600; color: var(--tb-harbor-teal); display: block; }
+.value-desc { font-size: .92rem; color: var(--tb-muted-text); }
+
+/* ===== EDUCATION ===== */
+.edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 36px; }
+.edu-card {
+  background: var(--tb-white); border: 1px solid var(--tb-stone);
+  border-radius: 14px; overflow: hidden; transition: .18s ease;
+}
+.edu-card:hover { box-shadow: 0 6px 24px rgba(20,82,76,.08); transform: translateY(-2px); }
+.edu-card-img {
+  height: 180px; background: var(--tb-teal-tint); position: relative; overflow: hidden;
+}
+.edu-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.edu-card-img::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(14,58,55,.10), rgba(14,58,55,.30));
+}
+.edu-card-body { padding: 24px; }
+.edu-tag {
+  font-size: .7rem; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--tb-brass); font-weight: 600; margin-bottom: 8px; display: block;
+}
+.edu-card h4 { font-size: 1.05rem; color: var(--tb-harbor-teal); margin-bottom: .3em; }
+.edu-card p { font-size: .88rem; color: var(--tb-muted-text); margin-bottom: 12px; }
+.edu-link {
+  font-weight: 600; font-size: .88rem; color: var(--tb-harbor-teal);
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.edu-link svg { width: 14px; height: 14px; }
+
+/* ===== FAQ ===== */
+.faq-list { max-width: 780px; margin: 36px auto 0; }
+.faq-item { border-bottom: 1px solid var(--tb-stone); }
+.faq-btn {
+  width: 100%; background: none; border: none; cursor: pointer;
+  padding: 22px 0; display: flex; justify-content: space-between; align-items: center;
+  text-align: left; gap: 16px;
+}
+.faq-btn span {
+  font-family: var(--tb-serif); font-weight: 600; font-size: 1.1rem;
+  color: var(--tb-harbor-teal); line-height: 1.3;
+}
+.faq-btn svg {
+  width: 20px; height: 20px; flex: none; color: var(--tb-brass);
+  transition: transform .25s ease;
+}
+.faq-btn[aria-expanded="true"] svg { transform: rotate(45deg); }
+.faq-answer {
+  max-height: 0; overflow: hidden; transition: max-height .3s ease;
+}
+.faq-answer-inner {
+  padding: 0 0 22px; font-size: .95rem; color: var(--tb-muted-text); line-height: 1.65;
+}
+
+/* ===== CTA / CONTACT ===== */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+.contact-info h3 { color: var(--tb-ivory); }
+.contact-details { list-style: none; padding: 0; margin: 24px 0 0; }
+.contact-details li {
+  display: flex; gap: 14px; align-items: flex-start; padding: 12px 0;
+  border-bottom: 1px solid rgba(250,247,241,.1);
+}
+.contact-details li:last-child { border-bottom: none; }
+.contact-details svg { width: 20px; height: 20px; color: var(--tb-brass); flex: none; margin-top: 2px; }
+.contact-details a { color: var(--tb-ivory); text-decoration: none; }
+.contact-details a:hover { color: var(--tb-brass); }
+.contact-social { display: flex; gap: 12px; margin-top: 24px; }
+.contact-social a {
+  width: 40px; height: 40px; border-radius: 10px;
+  border: 1px solid rgba(250,247,241,.2); display: grid; place-items: center;
+  color: var(--tb-ivory); transition: .18s ease;
+}
+.contact-social a:hover { background: var(--tb-brass); border-color: var(--tb-brass); color: var(--tb-evergreen); }
+.contact-social svg { width: 18px; height: 18px; }
+
+/* Contact form */
+.contact-form-card {
+  background: var(--tb-white); border-radius: 16px; padding: 36px;
+}
+.contact-form-card h3 { color: var(--tb-harbor-teal); margin-bottom: .3em; }
+.contact-form-card .form-intro { font-size: .9rem; color: var(--tb-muted-text); margin-bottom: 24px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { margin-bottom: 18px; }
+.form-group label {
+  display: block; font-weight: 600; font-size: .875rem;
+  color: var(--tb-evergreen); margin-bottom: 7px;
+}
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; font-family: var(--tb-sans); font-size: 1rem;
+  color: var(--tb-ink); background: var(--tb-ivory);
+  border: 1px solid var(--tb-stone); border-radius: 8px; padding: 13px 15px;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none; border-color: var(--tb-harbor-teal);
+  box-shadow: 0 0 0 3px rgba(20,82,76,.15);
+}
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-group select { cursor: pointer; appearance: auto; }
+.form-group .error-msg {
+  font-size: .8rem; color: #8A4232; margin-top: 4px; display: none;
+}
+.form-group.has-error input, .form-group.has-error select, .form-group.has-error textarea {
+  border-color: #8A4232;
+}
+.form-group.has-error .error-msg { display: block; }
+.form-privacy {
+  font-size: .8rem; color: var(--tb-muted-text); margin: 12px 0 0;
+}
+.form-success {
+  display: none; text-align: center; padding: 40px 20px;
+}
+.form-success.show { display: block; }
+.form-success svg { width: 48px; height: 48px; color: var(--tb-harbor-teal); margin: 0 auto 16px; }
+.form-success h4 { color: var(--tb-harbor-teal); font-size: 1.3rem; }
+.form-success p { color: var(--tb-muted-text); margin: 8px auto 0; }
+
+/* ===== NEWSLETTER ===== */
+.newsletter-bar {
+  background: var(--tb-brass-soft); border-top: 1px solid var(--tb-stone);
+  border-bottom: 1px solid var(--tb-stone); padding: 48px 0;
+}
+.newsletter-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap;
+}
+.newsletter-inner h3 { margin-bottom: .15em; }
+.newsletter-inner p { margin-bottom: 0; font-size: .92rem; color: var(--tb-muted-text); max-width: 44ch; }
+.newsletter-form { display: flex; gap: 10px; flex: none; }
+.newsletter-form input {
+  font-family: var(--tb-sans); font-size: .95rem; padding: 13px 18px;
+  border: 1px solid var(--tb-stone); border-radius: 8px; background: var(--tb-white);
+  color: var(--tb-ink); width: 280px;
+}
+.newsletter-form input:focus { outline: none; border-color: var(--tb-harbor-teal); box-shadow: 0 0 0 3px rgba(20,82,76,.15); }
+
+/* ===== FOOTER ===== */
+.site-footer { background: var(--tb-evergreen); color: rgba(250,247,241,.78); padding: 70px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; }
+.footer-brand .logo-glyph {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--tb-brass); display: inline-grid; place-items: center;
+  font-family: var(--tb-serif); font-weight: 700; color: var(--tb-evergreen); font-size: 1.3rem;
+}
+.footer-brand .brand-name {
+  font-family: var(--tb-serif); font-weight: 600; font-size: 1.1rem;
+  color: var(--tb-ivory); display: block; margin: 12px 0 4px;
+}
+.footer-brand .brand-tag {
+  font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
+  color: rgba(250,247,241,.5); font-weight: 600;
+}
+.footer-brand p { font-size: .88rem; margin-top: 14px; color: rgba(250,247,241,.6); max-width: 32ch; }
+.footer-social { display: flex; gap: 10px; margin-top: 18px; }
+.footer-social a {
+  width: 36px; height: 36px; border-radius: 8px;
+  border: 1px solid rgba(250,247,241,.2); display: grid; place-items: center;
+  color: var(--tb-ivory); transition: .18s ease;
+}
+.footer-social a:hover { background: var(--tb-brass); border-color: var(--tb-brass); color: var(--tb-evergreen); }
+.footer-social svg { width: 16px; height: 16px; }
+
+.footer-col h5 {
+  font-family: var(--tb-sans); font-weight: 600; font-size: .78rem;
+  text-transform: uppercase; letter-spacing: .12em; color: var(--tb-brass);
+  margin-bottom: 18px;
+}
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { color: rgba(250,247,241,.7); font-size: .9rem; text-decoration: none; transition: .15s ease; }
+.footer-col a:hover { color: var(--tb-brass); }
+
+.footer-bottom {
+  margin-top: 50px; padding: 28px 0; border-top: 1px solid rgba(250,247,241,.1);
+}
+.footer-bottom-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 30px; flex-wrap: wrap; }
+.footer-legal { font-size: .78rem; line-height: 1.6; color: rgba(250,247,241,.45); max-width: 70ch; }
+.footer-links { display: flex; gap: 20px; flex: none; }
+.footer-links a { font-size: .78rem; color: rgba(250,247,241,.5); }
+.footer-links a:hover { color: var(--tb-brass); }
+
+/* ===== DISCLAIMER (folded into footer as fine print) ===== */
+.footer-disclaimer {
+  margin-top: 46px; padding-top: 30px;
+  border-top: 1px solid rgba(250,247,241,.1);
+}
+.disclaimer-label {
+  font-family: var(--tb-sans); font-weight: 600; font-size: .7rem;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--tb-brass);
+  margin: 0 0 14px; display: block;
+}
+.disclaimer-text {
+  font-size: .78rem; line-height: 1.65; color: rgba(250,247,241,.5);
+  max-width: none; margin: 0;
+  column-count: 2; column-gap: 48px;
+}
+
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+  position: fixed; bottom: 28px; right: 28px; z-index: 800;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--tb-harbor-teal); color: var(--tb-white);
+  border: none; cursor: pointer; display: grid; place-items: center;
+  box-shadow: 0 4px 16px rgba(20,82,76,.25);
+  opacity: 0; visibility: hidden; transition: .2s ease;
+}
+.back-to-top.visible { opacity: 1; visibility: visible; }
+.back-to-top:hover { background: var(--tb-evergreen); }
+.back-to-top svg { width: 20px; height: 20px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 56px; padding: 70px 0 90px; }
+  .hero-visual { max-width: 460px; }
+  .hero-visual .media-frame { aspect-ratio: 16 / 11; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 900px) {
+  .nav-desktop, .header-cta .header-phone { display: none; }
+  .mobile-toggle { display: block; }
+  .services-panel.active { grid-template-columns: 1fr; }
+  .grid-2, .contact-grid, .mission-grid, .why-grid { grid-template-columns: 1fr; }
+  .intro-grid { grid-template-columns: 1fr; gap: 36px; }
+  .process-steps { grid-template-columns: 1fr; gap: 20px; }
+  .process-connector { display: none; }
+  .process-step { text-align: left; display: flex; gap: 16px; align-items: flex-start; }
+  .process-num { font-size: 1.6rem; flex: none; width: 40px; margin-bottom: 0; }
+  .process-step p { max-width: none; }
+}
+
+@media (max-width: 760px) {
+  .section { padding: 60px 0; }
+  .grid-3, .pillars-grid, .audience-grid, .edu-grid { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .disclaimer-text { column-count: 1; }
+  .newsletter-inner { flex-direction: column; align-items: flex-start; }
+  .newsletter-form { flex-direction: column; width: 100%; }
+  .newsletter-form input { width: 100%; }
+  .footer-bottom-inner { flex-direction: column; }
+  .hero-inner { padding: 40px 0 70px; }
+  .hero-visual { max-width: 100%; }
+  .hero-caption-card { left: 0; right: 0; bottom: -20px; max-width: none; padding: 18px 20px; }
+  .hero-caption-card p { font-size: .98rem; }
+  .trust-bar-inner { gap: 24px; }
+  .header-cta .header-btn { padding: 8px 16px; font-size: .8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+/* Focus states for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--tb-harbor-teal); outline-offset: 2px;
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#" class="header-logo" aria-label="T-Bridge Finance LLC — Home">
+      <div class="logo-glyph">T</div>
+      <div>
+        <span class="logo-text">T-Bridge Finance</span>
+        <span class="logo-tag">Protect · Build · Preserve</span>
+      </div>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <div class="nav-dropdown" id="services-dropdown">
+        <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Services
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" role="menu">
+          <span class="dropdown-section-label">Protect</span>
+          <a href="#services" class="dropdown-item" role="menuitem"><span class="di-label">Life &amp; Health Insurance</span><span class="di-desc">Income protection &amp; coverage guidance</span></a>
+          <a href="#services" class="dropdown-item" role="menuitem"><span class="di-label">Mortgage Protection</span><span class="di-desc">Keep the family home secure</span></a>
+          <a href="#services" class="dropdown-item" role="menuitem"><span class="di-label">Final Expense Insurance</span><span class="di-desc">Caring coverage for end-of-life costs</span></a>
+          <a href="#services" class="dropdown-item" role="menuitem"><span class="di-label">Disability &amp; Long-Term Care</span><span class="di-desc">Protect income &amp; independence</span></a>
+          <span class="dropdown-section-label">Build</span>
+          <a href="#services" class="dropdown-item" role="menuitem"><span class="di-label">College Funding</span><span class="di-desc">529 planning &amp; education strategy</span></a>
+          <a href="#services" class="dropdown-item" role="menuitem"><span class="di-label">IUL &amp; Tax-Advantaged Plans</span><span class="di-desc">Wealth building with protection</span></a>
+          <a href="#services" class="dropdown-item" role="menuitem"><span class="di-label">Annuities &amp; 401k Rollovers</span><span class="di-desc">Retirement income strategies</span></a>
+          <span class="dropdown-section-label">Preserve</span>
+          <a href="#services" class="dropdown-item" role="menuitem"><span class="di-label">Estate Planning</span><span class="di-desc">Organize assets, wishes &amp; beneficiaries</span></a>
+          <a href="#services" class="dropdown-item" role="menuitem"><span class="di-label">Trust Planning</span><span class="di-desc">Probate avoidance &amp; legacy protection</span></a>
+        </div>
+      </div>
+      <a href="#process">Process</a>
+      <a href="#resources">Resources</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-cta">
+      <a href="tel:+12175723330" class="header-phone" aria-label="Call us">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (217) 572-3330
+      </a>
+      <a href="#contact" class="header-btn">Book a Conversation</a>
+    </div>
+
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- Mobile navigation -->
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <button class="mobile-services-toggle" id="mobile-services-toggle" aria-expanded="false">
+      Services
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="mobile-services-list" id="mobile-services-list">
+      <a href="#services" onclick="closeMobileMenu()">Life &amp; Health Insurance</a>
+      <a href="#services" onclick="closeMobileMenu()">Indexed Universal Life</a>
+      <a href="#services" onclick="closeMobileMenu()">Final Expense Insurance</a>
+      <a href="#services" onclick="closeMobileMenu()">Disability &amp; Long-Term Care</a>
+      <a href="#services" onclick="closeMobileMenu()">Critical Illness &amp; Hospital Indemnity</a>
+      <a href="#services" onclick="closeMobileMenu()">Mortgage Protection</a>
+      <a href="#services" onclick="closeMobileMenu()">College Funding</a>
+      <a href="#services" onclick="closeMobileMenu()">Estate Planning</a>
+      <a href="#services" onclick="closeMobileMenu()">Trust Planning</a>
+      <a href="#services" onclick="closeMobileMenu()">Tax-Advantaged Portfolios</a>
+      <a href="#services" onclick="closeMobileMenu()">Annuities &amp; 401k Rollovers</a>
+    </div>
+    <a href="#process" onclick="closeMobileMenu()">Process</a>
+    <a href="#resources" onclick="closeMobileMenu()">Resources</a>
+    <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <div class="mobile-cta-group">
+      <a href="tel:+12175723330" class="btn btn-secondary" onclick="closeMobileMenu()">Call (217) 572-3330</a>
+      <a href="#contact" class="btn btn-primary" onclick="closeMobileMenu()">Book a Conversation</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="eyebrow">Insurance · Retirement · Estate · Legacy Planning</span>
+        <h1>Protect your future. Preserve your wealth.</h1>
+        <p class="lead">T-Bridge Finance LLC helps families protect income, build long-term financial security, and preserve generational wealth through clear, personalized planning strategies.</p>
+        <div class="btn-row">
+          <a href="#contact" class="btn btn-white">Book a Conversation</a>
+          <a href="#services" class="btn btn-accent" style="color:var(--tb-ivory);border-color:rgba(250,247,241,.4);box-shadow:inset 0 -2px 0 var(--tb-brass);">Explore Services</a>
+        </div>
+        <div class="hero-trust">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Maryland &amp; U.S. families
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Education-first guidance
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            No-pressure approach
+          </span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <!-- Warm, family-centered photography (client should replace with their own approved imagery) -->
+        <div class="media-frame">
+          <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=80"
+               alt="A multi-generational family spending warm, relaxed time together at home">
+        </div>
+        <div class="hero-caption-card">
+          <div class="hero-caption-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
+          </div>
+          <p>A trusted bridge from uncertainty to lasting financial freedom.</p>
+          <div class="pillars">
+            <span>Protect</span>
+            <span>Build</span>
+            <span>Preserve</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST BAR ===================== -->
+<div class="trust-bar">
+  <div class="wrap">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Licensed Financial Professional
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        Family-Centered Planning
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        Plain-English Guidance
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Bowie, Maryland &amp; U.S.-Serving
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== ABOUT / INTRO ===================== -->
+<section class="section section--ivory" id="about">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div>
+        <span class="eyebrow">About T-Bridge Finance</span>
+        <h2>A bridge from financial uncertainty to lasting confidence</h2>
+        <p>T-Bridge Finance LLC is a Maryland-based financial services and insurance planning firm helping individuals and families across the United States. We bring together life insurance, health insurance guidance, income protection, college funding, estate planning, trust planning, retirement planning, mortgage protection, and final expense coverage into a practical, coordinated approach.</p>
+        <p>Our approach is education-first. Instead of overwhelming you with technical language, we explain your options in plain English, answer your questions, review your current position, and recommend strategies that fit your needs, life stage, budget, and long-term goals.</p>
+        <div class="btn-row" style="margin-top:24px;">
+          <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+          <a href="#services" class="btn btn-secondary">View Our Services</a>
+        </div>
+      </div>
+      <div class="intro-visual">
+        <!-- Advisor-and-family conversation imagery (client should replace with approved photography) -->
+        <div class="media-frame media-frame--grade">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80"
+               alt="A financial advisor having a warm, unhurried planning conversation with a client across a table">
+        </div>
+        <div class="intro-visual-card">
+        <div class="intro-visual-quote">
+          &ldquo;A plan should be built around your real life &mdash; not around a generic product.&rdquo;
+        </div>
+        <p class="intro-visual-attr">&mdash; T-Bridge Finance LLC</p>
+        <div class="intro-stats">
+          <div class="intro-stat">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <span class="stat-label">Protection First</span>
+          </div>
+          <div class="intro-stat">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <span class="stat-label">Family Focused</span>
+          </div>
+          <div class="intro-stat">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+            <span class="stat-label">Education-First</span>
+          </div>
+          <div class="intro-stat">
+            <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <span class="stat-label">Long-Term Support</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BRAND PILLARS ===================== -->
+<section class="section section--sage">
+  <div class="wrap text-center">
+    <span class="eyebrow">Our Framework</span>
+    <h2>Protect · Build · Preserve</h2>
+    <p class="lead mx-auto" style="text-align:center;">Every family strategy starts with a simple framework: protect what you have, build toward your goals, and preserve what matters most for the next generation.</p>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Protect</h3>
+        <p>Create a financial shield before uncertainty arrives. Life insurance, health coverage, disability protection, mortgage coverage, and final expense planning reduce financial damage when life changes.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+        </div>
+        <h3>Build</h3>
+        <p>Develop strategies for long-term financial confidence. College funding, retirement income planning, IUL, indexed annuities, 401k rollovers, and tax-advantaged strategies support family goals over time.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Preserve</h3>
+        <p>Keep control of what you have built. Estate planning, trust planning, beneficiary coordination, and legacy-focused strategies help wealth, home equity, and family intentions transfer with less confusion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section section--ivory" id="services">
+  <div class="wrap text-center">
+    <span class="eyebrow">What We Do</span>
+    <h2>Protection, planning, and wealth preservation services</h2>
+    <p class="lead mx-auto" style="text-align:center;">Each service solves a practical problem. They can stand alone or work together as part of a coordinated family strategy.</p>
+    <div class="services-tabs" role="tablist">
+      <button class="services-tab active" role="tab" aria-selected="true" data-tab="protect">Protect</button>
+      <button class="services-tab" role="tab" aria-selected="false" data-tab="build">Build</button>
+      <button class="services-tab" role="tab" aria-selected="false" data-tab="preserve">Preserve</button>
+    </div>
+
+    <!-- Protect panel -->
+    <div class="services-panel active" id="panel-protect" role="tabpanel" style="text-align:left;">
+      <div class="card service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <h4>Life &amp; Health Insurance</h4>
+        <p>Build a practical protection foundation. Life insurance helps protect loved ones from financial hardship. Health insurance guidance helps families manage medical cost exposure.</p>
+      </div>
+      <div class="card service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h4>Mortgage Protection</h4>
+        <p>Protect the family home if death, disability, or income disruption makes mortgage payments difficult. The home is often a family's largest asset and emotional center.</p>
+      </div>
+      <div class="card service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>Final Expense Insurance</h4>
+        <p>A caring, practical way to prevent loved ones from facing unexpected funeral, burial, cremation, and end-of-life bills during an already difficult time.</p>
+      </div>
+      <div class="card service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg></div>
+        <h4>Long-Term Care &amp; Disability Planning</h4>
+        <p>Protect the income and independence that support a family's financial life. Disability coverage replaces income. Long-term care planning prepares for the cost of daily-living assistance.</p>
+      </div>
+      <div class="card service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h4>Critical Illness &amp; Hospital Indemnity</h4>
+        <p>Protect families from medical-cost gaps that remain even with health insurance. Provides cash benefits for deductibles, travel, bills, lost income, and household needs.</p>
+      </div>
+    </div>
+
+    <!-- Build panel -->
+    <div class="services-panel" id="panel-build" role="tabpanel" style="text-align:left;">
+      <div class="card service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg></div>
+        <h4>College Funding</h4>
+        <p>Prepare for education costs without sacrificing retirement or creating unnecessary debt. Includes 529 planning, funding-gap estimates, and coordination with family financial strategy.</p>
+      </div>
+      <div class="card service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
+        <h4>Indexed Universal Life Insurance</h4>
+        <p>Permanent life insurance with lifelong protection plus potential to build cash value over time. A flexible tool for protection, long-term goals, and wealth preservation strategy.</p>
+      </div>
+      <div class="card service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8l-4 4-4-4"/><path d="M12 12v4"/></svg></div>
+        <h4>Tax-Advantaged Portfolios</h4>
+        <p>Think beyond growth and focus on after-tax outcomes. Use tax-favored accounts and strategies aligned with your risk comfort, time horizon, and long-term goals.</p>
+      </div>
+      <div class="card service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/><circle cx="12" cy="15" r="1"/></svg></div>
+        <h4>Indexed Annuities &amp; 401k Rollovers</h4>
+        <p>Help pre-retirees and retirees create more predictable retirement income, protect a nest egg from unnecessary risk, and understand options before moving money.</p>
+      </div>
+    </div>
+
+    <!-- Preserve panel -->
+    <div class="services-panel" id="panel-preserve" role="tabpanel" style="text-align:left;">
+      <div class="card service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <h4>Estate Planning</h4>
+        <p>Organize how assets, wishes, insurance benefits, and responsibilities should be handled during life and after death. Coordinate insurance and beneficiary planning for less confusion.</p>
+      </div>
+      <div class="card service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h4>Trust Planning</h4>
+        <p>Protect assets, reduce probate delays, preserve privacy, and provide more control over how wealth is managed or transferred. A key legacy-planning pillar for Maryland homeowners and families building generational wealth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AUDIENCE ===================== -->
+<section class="section section--sage" id="audience">
+  <div class="wrap">
+    <span class="eyebrow">Who We Help</span>
+    <h2>Families and individuals at every stage</h2>
+    <p class="lead">T-Bridge Finance serves people with real planning concerns who want protection today and security tomorrow.</p>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h4>Parents &amp; Families</h4>
+        <p>Families who need life insurance, income protection, and education planning so children are supported no matter what.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h4>Homeowners</h4>
+        <p>Maryland homeowners who want to protect their mortgage, home equity, and family home from preventable planning gaps.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h4>Pre-Retirees &amp; Retirees</h4>
+        <p>People thinking about income, annuities, 401k rollovers, long-term care, and legacy planning for a secure retirement.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
+        <h4>Professionals &amp; Business Owners</h4>
+        <p>Working professionals and small business owners whose families depend on their income and need disability and income protection.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h4>Wealth Builders &amp; Legacy Planners</h4>
+        <p>First-generation wealth builders, diaspora families, and those who want to protect homeownership and pass on generational wealth.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <h4>Seniors &amp; Caregiving Families</h4>
+        <p>Seniors who want final expense protection and families with disabled loved ones who may need special needs trust guidance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY CHOOSE ===================== -->
+<section class="section section--deep" id="why">
+  <div class="wrap">
+    <div class="text-center">
+      <span class="eyebrow" style="color:var(--tb-brass);">Why T-Bridge Finance</span>
+      <h2>What makes the experience different</h2>
+      <p class="lead mx-auto" style="text-align:center;color:rgba(250,247,241,.7);">Families choose T-Bridge Finance because of the way we explain, listen, and plan &mdash; not the way we sell.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+        <div>
+          <h4>Plain-English explanations</h4>
+          <p>Insurance and planning options explained clearly so you can decide with confidence, not confusion.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div>
+          <h4>Personalized recommendations</h4>
+          <p>Strategies built around your family needs, budget, risk comfort, and long-term goals &mdash; never generic.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div>
+        <div>
+          <h4>Coordinated planning view</h4>
+          <p>Protection, retirement, education, estate, trust, and legacy planning work together as one strategy.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div>
+          <h4>Protection-first foundation</h4>
+          <p>A focus on protecting income, home, health, loved ones, and generational wealth before building further.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div>
+          <h4>No-pressure guidance</h4>
+          <p>A conversation, not a sales pitch. We help you understand, compare, and choose what fits your life.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div>
+          <h4>Ongoing support over time</h4>
+          <p>Life changes &mdash; marriage, children, new home, retirement. We review and adjust as your family evolves.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section class="section section--ivory" id="process">
+  <div class="wrap text-center">
+    <span class="eyebrow">How It Works</span>
+    <h2>A simple, no-pressure process</h2>
+    <p class="lead mx-auto" style="text-align:center;">Starting a conversation with T-Bridge Finance is not complicated. Here is how we work with families.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div>
+          <h4>Start With a Conversation</h4>
+          <p>We learn about your family, income, existing coverage, debts, mortgage, goals, health situation, and concerns.</p>
+        </div>
+        <div class="process-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div>
+          <h4>Identify the Gaps</h4>
+          <p>We help you see where you may be underprotected, overexposed, or missing important planning tools.</p>
+        </div>
+        <div class="process-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div>
+          <h4>Explain Clear Options</h4>
+          <p>Instead of confusing jargon, we explain available strategies, coverage types, benefits, limitations, and costs in plain language.</p>
+        </div>
+        <div class="process-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div>
+          <h4>Build a Tailored Plan</h4>
+          <p>Recommendations are shaped around your budget, risk comfort, time horizon, family responsibilities, and long-term goals.</p>
+        </div>
+        <div class="process-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">05</div>
+        <div>
+          <h4>Put Protection in Place</h4>
+          <p>We help with applications, beneficiary details, coverage selection, and setup so your plan becomes real.</p>
+        </div>
+        <div class="process-connector"></div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">06</div>
+        <div>
+          <h4>Review Over Time</h4>
+          <p>As life changes &mdash; marriage, children, home purchase, new job, retirement &mdash; we review and adjust your strategy.</p>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:40px;"><a href="#contact" class="btn btn-primary">Start Your Conversation</a></div>
+  </div>
+</section>
+
+<!-- ===================== MISSION & VALUES ===================== -->
+<section class="section section--sage" id="mission">
+  <div class="wrap">
+    <span class="eyebrow">Mission &amp; Values</span>
+    <h2>What drives everything we do</h2>
+    <div class="mission-grid">
+      <div>
+        <div class="mission-quote">
+          Our mission is to be the trusted bridge that carries families from financial uncertainty to lasting financial freedom &mdash; helping them protect loved ones today, build security for tomorrow, and preserve the legacy they want to leave for generations to come.
+        </div>
+        <p style="color:var(--tb-muted-text);">We envision a future where every family has the knowledge, protection, and financial strategy needed to own their future, protect what matters most, and pass on a stronger legacy to the next generation.</p>
+      </div>
+      <div>
+        <h3>Our core values</h3>
+        <ul class="values-list">
+          <li><div class="value-dot"></div><div><span class="value-name">Education</span><span class="value-desc">Clients should understand their options before they make decisions. We use plain-language explanations so you can move forward with clarity.</span></div></li>
+          <li><div class="value-dot"></div><div><span class="value-name">Protection</span><span class="value-desc">A strong financial life starts with a protection foundation. Insurance and risk planning help families withstand events that could damage years of progress.</span></div></li>
+          <li><div class="value-dot"></div><div><span class="value-name">Personalization</span><span class="value-desc">Every family's income, debts, goals, and priorities are different. Recommendations should be tailored, not generic.</span></div></li>
+          <li><div class="value-dot"></div><div><span class="value-name">Long-Term Partnership</span><span class="value-desc">A good plan should evolve as life changes. We emphasize ongoing support as your family grows and goals shift.</span></div></li>
+          <li><div class="value-dot"></div><div><span class="value-name">Legacy</span><span class="value-desc">Our work is connected to what families leave behind: a paid home, protected heirs, funded education, and fewer burdens for loved ones.</span></div></li>
+          <li><div class="value-dot"></div><div><span class="value-name">No-Pressure Guidance</span><span class="value-desc">We help clients feel supported, not sold to. We explain, compare, and help you choose what fits.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION / RESOURCES ===================== -->
+<section class="section section--ivory" id="resources">
+  <div class="wrap">
+    <div class="text-center">
+      <span class="eyebrow">Learn &amp; Plan</span>
+      <h2>Financial education for families</h2>
+      <p class="lead mx-auto" style="text-align:center;">We believe families should understand before they act. Explore practical guidance on insurance, planning, and protection topics.</p>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-card-img"><img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=700&q=80" alt="Parents and a young child enjoying a calm moment together at home"></div>
+        <div class="edu-card-body">
+          <span class="edu-tag">Insurance Planning</span>
+          <h4>Life Insurance for Families</h4>
+          <p>How much coverage does your family need? Understanding the basics of term and permanent life insurance.</p>
+          <span class="edu-link">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-card-img"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=700&q=80" alt="A warm, inviting family home exterior on a quiet residential street"></div>
+        <div class="edu-card-body">
+          <span class="edu-tag">Homeownership</span>
+          <h4>Mortgage Protection vs. PMI</h4>
+          <p>Understanding the difference between PMI and mortgage protection, and why homeowners should plan for both.</p>
+          <span class="edu-link">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-card-img"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=700&q=80" alt="A person reviewing planning documents at a desk in soft natural light"></div>
+        <div class="edu-card-body">
+          <span class="edu-tag">Legacy Planning</span>
+          <h4>Estate &amp; Trust Planning Basics</h4>
+          <p>Why families need wills, trusts, and beneficiary coordination &mdash; and how to start the conversation.</p>
+          <span class="edu-link">Read more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section section--sage" id="faq">
+  <div class="wrap">
+    <div class="text-center">
+      <span class="eyebrow">Frequently Asked Questions</span>
+      <h2>Common questions from families like yours</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          <span>How much life insurance does a family need?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">The right amount depends on income, debts, mortgage, children, education goals, funeral costs, existing savings, and how long the family would need support. A conversation with a financial professional can help estimate a practical starting point.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          <span>What is the difference between term and permanent life insurance?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Term life insurance covers a set period and is usually more affordable. Permanent life insurance can last for life and may include cash value features. The right choice depends on your goals, budget, and family situation.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          <span>Is mortgage protection the same as PMI?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">No. PMI (private mortgage insurance) protects the lender if the borrower defaults. Mortgage protection is intended to protect the homeowner or family from losing the home after a covered event such as death, disability, or income loss.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          <span>When should families start estate planning?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Estate planning should be reviewed after marriage, divorce, birth of a child, home purchase, death in the family, retirement, business changes, or major asset changes. The earlier families start, the less confusion and risk they leave behind.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          <span>Should parents pay for college before saving for retirement?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">College funding should be balanced with retirement planning. Loans may be available for college, but not for retirement. A coordinated strategy helps ensure both goals are supported without one undermining the other.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          <span>What is a revocable living trust?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">A revocable living trust is a legal arrangement that may hold assets during life and direct how they transfer after death. It may help families avoid probate for assets placed in it. Legal counsel should draft and advise on it.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          <span>Should everyone roll over an old 401k?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">Not necessarily. The right choice depends on fees, investment options, employer-plan features, income needs, taxes, and personal goals. A professional review can help you compare your options before moving retirement funds.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          <span>Why is disability planning important for families?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner">A family's income is often its most important financial asset. If income stops because of illness or injury, savings can disappear quickly. Disability insurance helps replace a portion of income so the family can maintain stability.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT / CTA ===================== -->
+<section class="section section--deep" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow" style="color:var(--tb-brass);">Get in Touch</span>
+        <h2>Begin a conversation about your family's financial future</h2>
+        <p>Whether you are starting with life insurance, reviewing your current coverage, protecting your mortgage, planning for retirement, or thinking about your family legacy, we are here to help you take the next step with clarity.</p>
+        <ul class="contact-details">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>16701 Melford Boulevard<br>Bowie, Maryland 20715</div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+12175723330">(217) 572-3330</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:info@t-bridgefinancellc.com">info@t-bridgefinancellc.com</a>
+          </li>
+        </ul>
+        <div class="contact-social">
+          <a href="#" aria-label="Facebook"><!-- Client should verify URL -->
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram"><!-- Client should verify URL -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn"><!-- Client should verify URL -->
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok"><!-- Client should verify URL -->
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.11V9.02a6.16 6.16 0 00-.79-.05A6.26 6.26 0 003.23 15.2a6.26 6.26 0 006.26 6.26 6.26 6.26 0 006.26-6.26V9.49a8.15 8.15 0 004.76 1.52V7.56a4.83 4.83 0 01-.92-.87z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-card" id="contact-form-card">
+        <h3>Request a Consultation</h3>
+        <p class="form-intro">Fill out the form below and an experienced financial professional will be in touch. No obligation, no pressure.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" name="fname" required autocomplete="given-name">
+              <div class="error-msg">Please enter your first name.</div>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" name="lname" required autocomplete="family-name">
+              <div class="error-msg">Please enter your last name.</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+              <div class="error-msg">Please enter a valid email address.</div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel">
+              <div class="error-msg">Please enter your phone number.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-method">Preferred Contact Method</label>
+            <select id="contact-method" name="contact-method">
+              <option value="">Select one</option>
+              <option value="call">Phone Call</option>
+              <option value="whatsapp">WhatsApp</option>
+              <option value="email">Email</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="service-interest">Service Interest</label>
+            <select id="service-interest" name="service-interest">
+              <option value="">Select a service area</option>
+              <option value="life-health">Life &amp; Health Insurance</option>
+              <option value="iul">Indexed Universal Life Insurance</option>
+              <option value="final-expense">Final Expense Insurance</option>
+              <option value="disability-ltc">Long-Term Care &amp; Disability Planning</option>
+              <option value="critical-illness">Critical Illness &amp; Hospital Indemnity</option>
+              <option value="mortgage">Mortgage Protection</option>
+              <option value="college">College Funding</option>
+              <option value="estate">Estate Planning</option>
+              <option value="trust">Trust Planning</option>
+              <option value="tax">Tax-Advantaged Portfolios</option>
+              <option value="annuity-401k">Indexed Annuities &amp; 401k Rollovers</option>
+              <option value="general">General Consultation</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Needs</label>
+            <textarea id="message" name="message" rows="4" placeholder="Briefly describe your financial planning goals or questions..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send My Request</button>
+          <p class="form-privacy">Your information is kept confidential. This form does not create a binding agreement or policy.</p>
+        </form>
+
+        <div class="form-success" id="form-success">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <h4>Thank you for reaching out.</h4>
+          <p>A member of the T-Bridge Finance team will be in touch with you shortly. We look forward to the conversation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWSLETTER ===================== -->
+<div class="newsletter-bar">
+  <div class="wrap">
+    <div class="newsletter-inner">
+      <div>
+        <h3>Stay informed</h3>
+        <p>Subscribe to receive financial planning insights, practical protection tips, and educational guidance for your family.</p>
+      </div>
+      <form class="newsletter-form" onsubmit="event.preventDefault();this.querySelector('input').value='Subscribed!';this.querySelector('input').disabled=true;this.querySelector('button').textContent='Thank you';">
+        <input type="email" placeholder="Your email address" required aria-label="Email address for newsletter">
+        <button type="submit" class="btn btn-primary" style="padding:13px 24px;flex:none;">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-glyph">T</div>
+        <span class="brand-name">T-Bridge Finance LLC</span>
+        <span class="brand-tag">Protect · Build · Preserve</span>
+        <p>Helping families protect income, build long-term security, and preserve generational wealth.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.11V9.02a6.16 6.16 0 00-.79-.05A6.26 6.26 0 003.23 15.2a6.26 6.26 0 006.26 6.26 6.26 6.26 0 006.26-6.26V9.49a8.15 8.15 0 004.76 1.52V7.56a4.83 4.83 0 01-.92-.87z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Life &amp; Health Insurance</a></li>
+          <li><a href="#services">Indexed Universal Life</a></li>
+          <li><a href="#services">Final Expense Insurance</a></li>
+          <li><a href="#services">Disability &amp; LTC</a></li>
+          <li><a href="#services">Mortgage Protection</a></li>
+          <li><a href="#services">College Funding</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Planning</h5>
+        <ul>
+          <li><a href="#services">Estate Planning</a></li>
+          <li><a href="#services">Trust Planning</a></li>
+          <li><a href="#services">Tax-Advantaged Portfolios</a></li>
+          <li><a href="#services">Annuities &amp; 401k</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+12175723330">(217) 572-3330</a></li>
+          <li><a href="mailto:info@t-bridgefinancellc.com">info@t-bridgefinancellc.com</a></li>
+          <li>16701 Melford Blvd<br>Bowie, MD 20715</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Compliance-safe disclosures, integrated as footer fine print -->
+    <div class="footer-disclaimer">
+      <span class="disclaimer-label">Important Disclosures</span>
+      <p class="disclaimer-text">
+        The information on this website is for educational purposes only and should not be considered legal, tax, investment, or personalized financial advice. Products, benefits, features, costs, and availability may vary by carrier, state, age, health profile, underwriting, and individual circumstances. Insurance products are subject to underwriting, policy terms, exclusions, limitations, and carrier approval. Guarantees are backed by the claims-paying ability of the issuing insurance company. Policy loans, withdrawals, fees, and insufficient funding may affect policy values and benefits. T-Bridge Finance LLC may help coordinate insurance and financial planning strategies related to estate and trust goals. Legal documents such as wills, trusts, powers of attorney, and special needs trusts should be prepared and reviewed by qualified legal professionals. Tax laws are subject to change. Clients should consult qualified legal, tax, and financial professionals for guidance specific to their situation.
+      </p>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="wrap" style="padding:0;">
+        <div class="footer-bottom-inner">
+          <div class="footer-legal">
+            &copy; 2025 T-Bridge Finance LLC. All rights reserved. T-Bridge Finance LLC is a financial services and insurance planning firm. Products and services referenced on this site are subject to availability, underwriting, and applicable regulations.
+          </div>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Disclosures</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+(function() {
+  'use strict';
+
+  /* --- Sticky header shadow --- */
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function() {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  /* --- Mobile menu --- */
+  var mobileToggle = document.getElementById('mobile-toggle');
+  var navMobile = document.getElementById('nav-mobile');
+  mobileToggle.addEventListener('click', function() {
+    var isOpen = navMobile.classList.toggle('open');
+    mobileToggle.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  window.closeMobileMenu = function() {
+    navMobile.classList.remove('open');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
+
+  /* --- Mobile services sub-menu --- */
+  var mobileServicesToggle = document.getElementById('mobile-services-toggle');
+  var mobileServicesList = document.getElementById('mobile-services-list');
+  mobileServicesToggle.addEventListener('click', function() {
+    var isOpen = mobileServicesList.classList.toggle('open');
+    mobileServicesToggle.classList.toggle('open', isOpen);
+    mobileServicesToggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  /* --- Desktop services dropdown --- */
+  var dropdown = document.getElementById('services-dropdown');
+  var trigger = dropdown.querySelector('.nav-dropdown-trigger');
+  trigger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = dropdown.classList.toggle('open');
+    trigger.setAttribute('aria-expanded', isOpen);
+  });
+  document.addEventListener('click', function(e) {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  /* --- Service tabs --- */
+  var tabs = document.querySelectorAll('.services-tab');
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      tabs.forEach(function(t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      document.querySelectorAll('.services-panel').forEach(function(p) { p.classList.remove('active'); });
+      document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  /* --- FAQ accordion --- */
+  document.querySelectorAll('.faq-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      var answer = btn.nextElementSibling;
+      if (expanded) {
+        btn.setAttribute('aria-expanded', 'false');
+        answer.style.maxHeight = null;
+      } else {
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* --- Contact form validation --- */
+  var form = document.getElementById('contact-form');
+  var formSuccess = document.getElementById('form-success');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var valid = true;
+    var required = form.querySelectorAll('[required]');
+    required.forEach(function(field) {
+      var group = field.closest('.form-group');
+      if (!field.value.trim()) {
+        group.classList.add('has-error');
+        valid = false;
+      } else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+        group.classList.add('has-error');
+        valid = false;
+      } else {
+        group.classList.remove('has-error');
+      }
+    });
+    if (valid) {
+      form.style.display = 'none';
+      formSuccess.classList.add('show');
+    }
+  });
+  form.querySelectorAll('input, select, textarea').forEach(function(field) {
+    field.addEventListener('input', function() {
+      field.closest('.form-group').classList.remove('has-error');
+    });
+  });
+
+  /* --- Back to top --- */
+  var btt = document.getElementById('back-to-top');
+  window.addEventListener('scroll', function() {
+    btt.classList.toggle('visible', window.scrollY > 600);
+  });
+  btt.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+})();
+</script>
+</body>
+</html>
